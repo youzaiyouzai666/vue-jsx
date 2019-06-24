@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es6"
+    },
+    "include": [
+        "./src/**/*.vue",
+        "./src/**/*.js",
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
