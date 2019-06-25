@@ -1,25 +1,28 @@
 <template>
-  <div style="margin: 24px">
-    <ButtonCounter />
-    <ButtonJsx />
+  <div id="app">
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
-<script>
-import ButtonCounter from './components/ButtonCounter'
-import ButtonJsx from './components/ButtonJsx'
+<script lang="tsx">
+import { Component, Vue } from 'vue-property-decorator'
+import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
+@Component({
   components: {
-    ButtonCounter,
-    ButtonJsx
-  },
-  data() {
-    return {}
+    HelloWorld
   }
-}
+})
+export default class App extends Vue {}
 </script>
 
 <style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>
